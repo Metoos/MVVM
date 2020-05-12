@@ -1,0 +1,65 @@
+//
+//  PrefixHeader.pch
+//  BBA
+//
+//  Created by life on 2018/1/25.
+//  Copyright © 2018年 hdyg. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+
+//配置文件
+#import "AppConfig.h"
+#import "NotificationPostName.h"
+#import "WebViewJumpName.h"
+#import "VendorMarco.h"
+//类目
+#import "UIImageView+WebCache.h" //SDWebImage
+#import "JQExtensions.h"
+#import "UIImageView+JQExtension.h"
+#import "CALayer+LayerColor.h"
+#import "UIView+LoadState.h"
+
+//第三方功能类
+#import "MJExtension.h"
+#import "SVProgressHUD.h"
+#import "MJRefresh.h"
+#import "Masonry.h" //第三方自动布局框架
+#import <ReactiveObjC/ReactiveObjC.h> //函数响应式编程框架
+#import "JQHttpClient.h"//AFN再封装的网络请求类
+#import "UniversalManager.h"//通用工具管理类
+#import "JQNavigationController.h"
+#import "LEEAlert.h"
+#import "WRNavigationBar.h"
+#import "UniversalManager.h"
+#import "JQPickerView.h"
+#import "JQLanguageTool.h"
+//#import "SQLogToolManager.h"
+
+
+//基类
+#import "JQBaseViewModel.h"
+#import "JQCollectionCellViewModel.h"
+#import "JQCollectionViewModel.h"
+#import "JQTableViewCellViewModel.h"
+#import "JQTableViewModel.h"
+#import "JQBaseCollectionViewCell.h"
+#import "JQBaseTableViewCell.h"
+#import "JQBaseTableViewController.h"
+#import "JQBaseView.h"
+#import "JQBaseViewController.h"
+#import "JQCollectionViewController.h"
+#import "JQStaticTableViewController.h"
+#import "JQTableViewController.h"
+#import "JQBaseModel.h"
+#import "JQBaseRequest.h"
+
+
+
+
+#endif /* PrefixHeader_pch */

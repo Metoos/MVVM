@@ -1,0 +1,300 @@
+/* 
+  Localizable.strings
+  BBA
+
+  Created by life on 2018/9/30.
+  Copyright © 2018年 hdyg. All rights reserved.
+*/
+/* -------------- 公共 ------------- */
+
+"开发中..." = "development...";
+"语言" = "language";
+"语言切换" = "Language switch";
+"切换完成" = "Switch success";
+"提交" = "submit";
+"提交中" = "submit...";
+"请稍候" = "wait...";
+"确定" = "confirm";
+"确认" = "confirm";
+"提示" = "Tips";
+"成功" = "succeed";
+"失败" = "failed";
+"加载中" = "loading...";
+"取消" = "cancel";
+"拍照" = "take photos";
+"本地相册" = "photo album";
+"请选择上传的图片" = "Please select the uploaded photo";
+"支付" = "Pay";
+"下拉可以刷新" = "Pull down to refresh";
+"松开立即刷新" = "Release to refresh";
+"正在刷新数据中..." = "Loading...";
+"点击或上拉加载更多" = "Tap or pull up to load more";
+"正在加载更多的数据..." = "Loading...";
+"已经全部加载完毕" = "No more data";
+"上拉可以加载更多" = "Pull up to load more";
+"松开立即加载更多" = "Release to load more.";
+"修改成功，请重新登录！" = "Modified successfully, please login again!";
+"通知" = "Notice";
+"您的账号登录已过期或者已经在其他地方登录" = "Your account has expired or has been logged in elsewhere";
+"重新登录" = "Log back in";
+"发现新版本，是否立即更新" = "There is a new version and whether it is updated immediately";
+"立即更新" = "update";
+"是否确定退出登录！" = "Are you sure to log out!";
+"请求失败" = "The request failed";
+"上传头像中" = "Uploading avatars";
+"更新成功" = "update successful";
+"更新失败" = "update failed";
+"上传失败，请稍后重试" = "Upload failed. Please try again later";
+"网络异常请求失败" = "Network failed";
+"服务器异常请求失败" = "Server exception request failed";
+"修改成功，请重新登录！" = "Modified successfully, please login again!";
+"敬请期待" = "Stay tuned for";
+
+"扫一扫" = "scan";
+"相册" = "PhotoAlbum";
+"暂未识别出二维码" = "The qr code is not recognized yet";
+"将二维码放入框内, 即可自动扫描" = "Put the qr code into the box, it can be automatically scanned";
+
+
+/** 登录 */
+"登录" = "Sign in";
+"登录中..." = "Waiting";
+"密码" = "Password";
+"请输入登录密码" = "Please enter your login password";
+"立即注册" = "Register now";
+
+/** 注册 */
+"注册" = "Register";
+"邀请码" = "Invite code";
+"请输入邀请码" = "Please enter the invitation code";
+"用户名" = "username";
+"请输入用户名" = "Please enter user name";
+"区号" = "area code";
+"手机号码" = "Mobile phone number";
+"手机验证码" = "Mobile code";
+"登录密码" = "login password";
+"请输入6-16位数字加字母" = "Please enter 6-16 digits plus letters";
+"请选择区号" = "Please select the area code";
+"请输入手机号" = "Please enter your mobile phone";
+"请输入验证码" = "Please enter the code";
+"两次输入的登录密码不一致" = "The login passwords filled in twice are inconsistent";
+"图形验证码" = "Graphic code";
+"请输入图形验证码" = "Please enter graphic code";
+"获取验证码" = "Get code";
+"发送中..." = "Send in...";
+"重新发送" = "Resend";
+"发送验证码失败" = "Failed to send captcha";
+"发送验证码" = "Get code";
+/** 忘记密码 */
+"忘记密码" = "Forgot password";
+"新密码" = "new password";
+"请输入新密码" = "Please enter a new password";
+"请再次输入新密码" = "Please enter your new password again";
+"两次填写的新密码不一致" = "The new passwords filled in twice do not match";
+"确认找回" = "Confirm";
+
+
+
+/** ====== 首页模块 ======= */
+/** 首页 */
+"首页" = "Home";
+" 扫码支付"  = " Sweep the code to pay";
+" 收款二维码" = " Collection qr code";
+"可用DCT" = "Available DCT";
+"DCT总资产" = "Total assets of DCT";
+"DCT理财资产" = "DCT financial assets";
+"提币" = "Mention money";
+"充币" = "Charge money";
+"转账" = "Transfer";
+"我的粉丝" = "My fans";
+"挖矿" = "Mining";
+"兑换" = "Exchange";
+"动态奖励" = "Dynamic incentive";
+"我的资产" = "My assets";
+"推荐分享" = "Share";
+
+"资产" = "Assets";
+"应用" = "Application";
+"行情" = "Market";
+"社群" = "Community";
+"我的" = "My";
+
+/** 提币\转账 */
+"选择" = "choose";
+"请选择钱包地址" = "Please select the wallet address";
+"提币地址：" = "Mention money address:";
+"手续费：" = "Fees:";
+"手机号码：" = "phone:";
+"实际到账：" = "Actual receipt:";
+"请输入数量" = "Please enter quantity";
+"请输入手机号码" = "Please enter your mobile phone number";
+"请输入资金密码" = "Please enter your fund password";
+"请输入对方UID" = "Please enter the other party's UID";
+"请选择到账地址" = "Please select the billing address";
+"(添加提币地址请到我的-地址管理)" = "(add withdrawal address to my - address management)";
+"DCH提币数量：" = "DCH withdrawal quantity:";
+"可转出" = "Can turn out";
+"转账数量：" = "Transfer amount:";
+"当前可提币数量" = "The amount of money currently available";
+"可用" = "available";
+"确认提币" = "Confirm";
+"确认转账" = "Confirm";
+//提币记录
+"提币记录" = "Mention record";
+"提币数量" = "number";
+"实际到账" = "Actual to the account";
+"转账状态" = "Transfer state";
+"更新时间" = "Update time";
+//转账记录
+"转账记录" = "Transfer record";
+
+/** 充币 */
+
+"钱包地址" = "wallet address";
+"复制" = "copy";
+"复制成功" = "Copy success";
+"复制失败" = "Copy failure";
+"充币说明" = "Charge money that";
+"充币记录" = "Charge money record";
+"关闭" = "close";
+//充币记录
+"币种名称" = "Currency name";
+"充币数量" = "number";
+"实时价格" = "Real-time price";
+"兑换DCT" = "Exchange DCT";
+"到账时间" = "Arrive time";
+/** 分享 或 收款 */
+
+"您的推荐码：" = "Your recommendation code:";
+"扫面二维码即可分享Dcash钱包供好友下载" = "You can share your Dcash wallet with your friends by scanning the qr code";
+"分享记录" = "Share the record";
+"扫面二维码即可转入" = "Scan the qr code and enter";
+"收款二维码" = "Collection qr code";
+"转入记录" = "Into record";
+"无效二维码" = "Invalid qr code";
+"复制推广链接" = "Copy generalize links";
+
+//分享记录
+"手机号" = "phone";
+"用户名" = "username";
+"注册时间" = "Registration time";
+/** 挖矿*/
+
+"矿池资产" = "Ore asset pool";
+"天" = "day";
+"挖矿中" = "In mining";
+"开始挖矿" = "Began mining";
+"请输入挖矿数量" = "Please enter mining quantity";
+"请选择挖矿等级" = "Please select mining grade";
+"状态" = "state";
+"参考收益" = "The reference yield";
+"操作" = "operation";
+"撤回" = "withdraw";
+"退出" = "exit";
+
+/** 兑换 */
+
+"DCH兑换" = "DCH Exchange";
+"持有DCH数量" = "Hold the number of DCH";
+"算力矿石兑换" = "HashRate Ore";
+
+"DCT转倍增资产" = "DCT TurnTo DoubleAssets";
+"倍增资产DCT" = "DoubleAssets DCT";
+"可用DCT数量" = "Number of DCT available";
+"倍增资产DCT数量" = "Number of DoubleAssets DCT";
+"算力矿石" = "HashRate ore";
+"当前DCH实时价格" = "Current DCH real-time price";
+"杠杆倍数" = "Gearingxie";
+"当前算力矿石" = "Current HashRate ore ";
+
+"实际到账：" = "Actual receipt:";
+"资金密码：" = "Fund password:U";
+"确认兑换" = "Confirm the change";
+"兑换记录" = "Exchange record";
+"请输入DCT数量" = "Please enter the quantity of DCT";
+"请输入资金密码" = "Please enter your fund password";
+"免倍增资产额度" = "DoNotDoubleTheAmountOfAssets";
+
+//我的粉丝
+"电话号" = "phone";
+"DCT数量" = "Number of DCT";
+"粉丝" = "fans";
+"团队" = "team";
+/** ===== 应用模块 ======= */
+"商城" = "Mall";
+"供应链" = "Supply chain";
+"游戏" = "Game";
+"详情" = "detail";
+/** ===== 交易模块 ======= */
+/** 交易 */
+"名称" = "name";
+"实时价" = "Real-time price";
+"涨跌幅" = "price limit";
+/** ===== 社群模块 ======= */
+"百城社群联盟" = "Hundred cities community alliance";
+"资讯" = "Information";
+"培训" = "Training";
+"活动" = "Activity";
+"公告" = "Notice";
+"公告详情" = "Notice detail";
+/** ===== 我的 ===== */
+"我的" = "My";
+"用户名" = "Username";
+"级别" = "Level";
+"更换头像" = "Replace picture";
+"退出登录" = "Sign out";
+"手机号码" = "Phone number";
+"登录密码" = "Login password";
+"资金密码" = "Money password";
+"地址管理" = "Address management";
+"联系客服" = "Contact customer service";
+
+/** 平台建设意见 */
+"联系客服" = "Contact customer service";
+"请填写详细问题和意见" = "Please fill in the detailed questions and comments";
+"请输入申诉内容" = "Please enter the complaint content";
+"请简述标题（20字内）" = "Please briefly state the title (within 20 words)";
+"请提供相关问题的截图和照片" = "Please provide screenshots and photos of relevant issues";
+"确认提交" = "submit";
+"提交记录" = "Submit the record";
+"反馈详情" = "Feedback the details";
+"标题：" = "Title:";
+"图片:" = "Image:";
+"客服回复:" = "Customer service reply:";
+"时间" = "time";
+
+
+
+/** 手机号码绑定 */
+"解绑" = "unBind";
+"绑定" = "Bind";
+
+/** 修改地址 */
+"修改地址" = "Modify the address";
+"添加地址" = "add";
+"用户名"   = "username";
+"名称备注"   = "username";
+"钱包地址"   = "wallet address";
+"  是否设为默认地址"   = "  whether to set as default address";
+"默认" = "default";
+"支持英文字母、数字"   = "Support English letters and Numbers";
+"请输入钱包地址"   = "Please enter your wallet address";
+"新手指南" = "Newbie guide";
+/** 支付密码 修改支付密码 修改登录密码 */
+"请输入支付密码" = "Please enter the payment password";
+"新密码" = "new password";
+"确认密码" = "Confirm password";
+"请输入6-16位数字加字母" = "Please enter 6-16 digits plus letters";
+"两次输入的密码不一致" = "The two passwords did not match";
+"请输入旧密码" = "Please enter your new password";
+"确认" = "confirm";
+"发送中"  = "sending";
+"重新发送" = "resend";
+"资金密码" = "payment password";
+"登录密码" = "login password";
+"确认修改" = "Confirm";
+"请设置资金密码" = "Please set money password";
+"请输入资金密码" = "Please enter money password";
+"请再次输入资金密码" = "Please enter your money password again";
+"请输入6位数纯数字密码" = "Please enter a 6-digit pure numeric password";
+
