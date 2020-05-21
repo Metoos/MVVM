@@ -31,7 +31,9 @@
     self = [super initWithNibName:nil bundle:nil];
     if (self) {
         self.viewModel = (JQTableViewModel *)viewModel;
-   
+        self.showEmptyImageName = @"loadEmpty.png";
+        self.showEmptyTips      = @"";
+        self.isAutoShowEmpty    = YES;
     }
     return self;
 }
@@ -45,6 +47,10 @@
         UIStoryboard *board = [UIStoryboard storyboardWithName:name bundle:nil];
         self = [board instantiateViewControllerWithIdentifier:identiffier];
         self.viewModel = (JQTableViewModel*)viewModel;
+        
+        self.showEmptyImageName = @"loadEmpty.png";
+        self.showEmptyTips      = @"";
+        self.isAutoShowEmpty    = YES;
   
     }
     return self;
@@ -87,7 +93,7 @@
     self.tableView.estimatedRowHeight = 0;
     self.tableView.estimatedSectionFooterHeight = 0;
     self.tableView.estimatedSectionHeaderHeight = 0;
-    
+    self.tableView.backgroundColor = kTableViewBgColor;
     // 添加头部刷新控件
     self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
         @strongify(self);
@@ -118,6 +124,9 @@
 }
 
 - (void)jq_setupBinding {
+    
+    
+    
     
 }
 
@@ -203,33 +212,21 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    if (self.isAutoShowEmpty) {
-        if ([self.viewModel numberOfSections] == 0) {
-            tableView.stateView.backgroundColor = kClearColor;
-            [tableView showLoadStateWithMaskViewStateType:viewStateWithEmpty];
-        }else if ([self.viewModel numberOfSections] > 1)
-        {
-            [tableView dismessStateView];
-        }
-    }
-   
     return [self.viewModel numberOfSections];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    DLog(@"[self.viewModel numberOfRowInSection:section] = %ld",[self.viewModel numberOfRowInSection:section]);
-    
     if (self.isAutoShowEmpty) {
-        if ([self.viewModel numberOfSections] == 1)
-        {
-            if ([self.viewModel numberOfRowInSection:section]<=0) {
-                tableView.stateView.backgroundColor = kClearColor;
-                [tableView showLoadStateWithMaskViewStateType:viewStateWithEmpty];
-            }else
-            {
-                [tableView dismessStateView];
-            }
+        
+        [tableView showEmptyDataTipsViewForRowCount:[self.viewModel numberOfRowInSection:section] andFrame:CGRectMake(0, 0, tableView.width, tableView.height) imageNamed:self.showEmptyImageName tipsTitle:self.showEmptyTips withTipsTitleColor:kBlackColor withTipsTitleFont:kFont(14.0f)];
+        
+        if (tableView.emptyView) {
+            WEAKIFY
+            tableView.tapRefreshBlock = ^{
+                STRONGIFY
+                [self.tableView.mj_header beginRefreshing];
+            };
         }
     }
     

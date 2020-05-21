@@ -104,6 +104,11 @@
  */
 - (CGSize)collectionView:(UICollectionView *)collectionView referenceSizeForFooterInSection:(NSInteger)section;
 
+/**
+ 对应的collectionView:didSelectItemAtIndexPath:给对应的cell点击回调
+ */
+- (id)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath;
+
 @required
 /**
  对应的section返回多少Items
@@ -116,9 +121,6 @@
 - (JQCollectionCellViewModel *)cellViewModelForItemAtIndexPath:(NSIndexPath *)indexPath;
 
 
-/**
- 对应的collectionView:didSelectItemAtIndexPath:给对应的cell点击回调
- */
-- (id)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath;
+
 
 @end

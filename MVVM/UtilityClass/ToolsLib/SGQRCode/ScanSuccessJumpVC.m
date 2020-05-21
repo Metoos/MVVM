@@ -8,9 +8,9 @@
 
 #import "ScanSuccessJumpVC.h"
 //#import "SGWebView.h"
-
+#import <WebKit/WebKit.h>
 @interface ScanSuccessJumpVC () 
-@property (nonatomic , strong) UIWebView *webView;
+@property (nonatomic , strong) WKWebView *webView;
 @end
 
 @implementation ScanSuccessJumpVC

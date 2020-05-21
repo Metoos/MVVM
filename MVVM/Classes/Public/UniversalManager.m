@@ -587,8 +587,8 @@ static inline CGFLOAT_TYPE CGFloat_ceil(CGFLOAT_TYPE cgfloat) {
             folderSize +=[self fileSizeAtPath:absolutePath];
         }
         //SDWebImage框架自身计算缓存的实现
-        DLog(@"SDImageCache = %lf",(unsigned long)[[SDImageCache sharedImageCache] getSize]/1024.0/1024.0);
-        folderSize+=[[SDImageCache sharedImageCache] getSize]/1024.0/1024.0;
+        DLog(@"SDImageCache = %lf",(unsigned long)[[SDImageCache sharedImageCache] totalDiskSize]/1024.0/1024.0);
+        folderSize+=[[SDImageCache sharedImageCache] totalDiskSize]/1024.0/1024.0;
         return folderSize;
     }
     return 0;
@@ -596,7 +596,7 @@ static inline CGFLOAT_TYPE CGFloat_ceil(CGFLOAT_TYPE cgfloat) {
 
 - (CGFloat)getCachSize {
     
-    NSUInteger imageCacheSize = [[SDImageCache sharedImageCache] getSize];
+    NSUInteger imageCacheSize = [[SDImageCache sharedImageCache] totalDiskSize];
     //获取自定义缓存大小
     //用枚举器遍历 一个文件夹的内容
     //1.获取 文件夹枚举器
@@ -612,6 +612,26 @@ static inline CGFLOAT_TYPE CGFloat_ceil(CGFLOAT_TYPE cgfloat) {
     // 得到是字节  转化为M
     CGFloat totalSize = ((CGFloat)imageCacheSize+count)/1024/1024;
     return totalSize;
+}
+
+//字节大小转字符串 系统自带方法
++ (NSString *)byteCountFormatterCount:(long long)count
+{
+    return [NSByteCountFormatter stringFromByteCount:count countStyle:NSByteCountFormatterCountStyleFile];
+}
+//字节大小转字符串
++ (NSString *)byteCountTransformedValue:(id)value
+{
+ 
+    double convertedValue = [value doubleValue];
+    int multiplyFactor = 0;
+ 
+    NSArray *tokens = [NSArray arrayWithObjects:@"bytes",@"KB",@"MB",@"GB",@"TB",@"PB", @"EB", @"ZB", @"YB",nil];
+    while (convertedValue >= 1024) {
+        convertedValue /= 1024;
+        multiplyFactor++;
+    }
+    return [NSString stringWithFormat:@"%4.2f %@",convertedValue, [tokens objectAtIndex:multiplyFactor]];
 }
 
 #pragma mark 清除文件缓存

@@ -51,6 +51,9 @@
     self = [super initWithNibName:nil bundle:nil];
     if (self) {
         _viewModel = (JQTableViewModel *)viewModel;
+        self.showEmptyImageName = @"loadEmpty.png";
+        self.showEmptyTips      = @"";
+        self.isAutoShowEmpty    = YES;
     }
     return self;
 }
@@ -64,6 +67,9 @@
         UIStoryboard *board = [UIStoryboard storyboardWithName:name bundle:nil];
         self = [board instantiateViewControllerWithIdentifier:identiffier];
         _viewModel = (JQTableViewModel*)viewModel;
+        self.showEmptyImageName = @"loadEmpty.png";
+        self.showEmptyTips      = @"";
+        self.isAutoShowEmpty    = YES;
     }
     return self;
 }
@@ -146,8 +152,18 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    DLog(@"[self.viewModel numberOfRowInSection:section] = %ld",[self.viewModel numberOfRowInSection:section]);
-    [tableView showEmptyDataTipsViewForRowCount:[self.viewModel numberOfRowInSection:section] imageNamed:@"loadEmpty.png"];
+    if (self.isAutoShowEmpty) {
+        
+        [tableView showEmptyDataTipsViewForRowCount:[self.viewModel numberOfRowInSection:section] andFrame:CGRectMake(0, 0, tableView.width, tableView.height) imageNamed:self.showEmptyImageName tipsTitle:self.showEmptyTips withTipsTitleColor:kBlackColor withTipsTitleFont:kFont(14.0f)];
+        
+        if (tableView.emptyView) {
+            WEAKIFY
+            tableView.tapRefreshBlock = ^{
+                STRONGIFY
+                [self.tableView.mj_header beginRefreshing];
+            };
+        }
+    }
     
     return [self.viewModel numberOfRowInSection:section];
 }

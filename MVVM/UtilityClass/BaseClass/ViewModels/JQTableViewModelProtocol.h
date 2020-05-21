@@ -105,6 +105,10 @@
  */
 - (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section;
 
+/**
+ 对应的tableViewDidSelectedRowAtIndexPath给对应的cell点击回调
+ */
+- (id)tableViewDidSelectedRowAtIndexPath:(NSIndexPath *)indexPath;
 
 @required
 /**
@@ -117,9 +121,6 @@
  */
 - (JQTableViewCellViewModel *)cellViewModelForRowAtIndexPath:(NSIndexPath *)indexPath;
 
-/**
- 对应的tableViewDidSelectedRowAtIndexPath给对应的cell点击回调
- */
-- (id)tableViewDidSelectedRowAtIndexPath:(NSIndexPath *)indexPath;
+
 
 @end

@@ -47,6 +47,27 @@
     self = [super initWithNibName:nil bundle:nil];
     if (self) {
         self.viewModel = (JQCollectionViewModel *)viewModel;
+        self.showEmptyImageName = @"loadEmpty.png";
+        self.showEmptyTips      = @"";
+        self.isAutoShowEmpty    = YES;
+    }
+    return self;
+}
+
+- (instancetype)initStoryboardWithName:(NSString *)name
+                           identiffier:(NSString *)identiffier
+                             ViewModel:(id<JQBaseViewModelProtocol>)viewModel {
+    
+    self = [super initWithNibName:nil bundle:nil];
+    if (self) {
+        UIStoryboard *board = [UIStoryboard storyboardWithName:name bundle:nil];
+        self = [board instantiateViewControllerWithIdentifier:identiffier];
+        self.viewModel = (JQCollectionViewModel*)viewModel;
+        
+        self.showEmptyImageName = @"loadEmpty.png";
+        self.showEmptyTips      = @"";
+        self.isAutoShowEmpty    = YES;
+  
     }
     return self;
 }
@@ -140,6 +161,19 @@
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
+    if (self.isAutoShowEmpty) {
+        
+        [collectionView showEmptyDataTipsViewForRowCount:[self.viewModel numberOfItemsInSection:section] andFrame:CGRectMake(0, 0, collectionView.width, collectionView.height) imageNamed:self.showEmptyImageName tipsTitle:self.showEmptyTips withTipsTitleColor:kBlackColor withTipsTitleFont:kFont(14.0f)];
+        
+        if (collectionView.emptyView) {
+            WEAKIFY
+            collectionView.tapRefreshBlock = ^{
+                STRONGIFY
+                [self.collectionView.mj_header beginRefreshing];
+            };
+        }
+    }
+    
     return [self.viewModel numberOfItemsInSection:section];
 }
 

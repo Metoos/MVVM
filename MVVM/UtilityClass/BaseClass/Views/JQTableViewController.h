@@ -21,6 +21,10 @@
 
 /** 是否自动显示空数据界面 默认YES */
 @property (nonatomic,assign) BOOL isAutoShowEmpty;
+/** 显示空数据界面的提示图片   isAutoShowEmpty 为NO时 无效*/
+@property (nonatomic,strong) NSString *showEmptyImageName;
+/** 显示空数据界面的提示语   isAutoShowEmpty 为NO时 无效*/
+@property (nonatomic,assign) NSString *showEmptyTips;
 
 /** 是否显示没有更多数据加载 */
 @property (nonatomic,assign) BOOL showNotDataFooterLoadingMore;

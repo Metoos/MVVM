@@ -54,7 +54,7 @@
 /**
  *腾讯bugly crash收集SDK
  **/
-#define BuglyAppid @""
-#define BuglyAppkey @""
+#define BuglyAppid @"90c86261e9"
+#define BuglyAppkey @"677196f9-9ea0-40b2-b1cd-2a611f3224d0"
 
 #endif /* VendorMarco_h */

@@ -6,34 +6,31 @@
 platform :ios, ‘9.0’
 target 'MVVM' do
   
-  pod 'AFNetworking', '~> 3.1.0'
+  pod 'AFNetworking', '~> 4.0.1'
   pod 'Reachability', '~> 3.1.1'
-  pod 'SVProgressHUD', '~> 2.0.3'
-  pod 'SDWebImage', '~> 4.3.1'
-  pod 'MJExtension', '~> 3.0.10'
-  pod 'MJRefresh', '~> 3.1.9'
+  pod 'SVProgressHUD', '~> 2.2.5'
+  pod 'SDWebImage', '~> 5.8.0'
+  pod 'MJExtension', '~> 3.2.1'
+  pod 'MJRefresh', '~> 3.4.3'
   pod 'FDFullscreenPopGesture','~> 1.1'
   #自动布局框架
-  pod 'Masonry'
-  #正则表达式库
-  #pod 'RegexKitLite'
-
-  pod 'ZYBannerView', '~> 1.1.3'
+  pod 'Masonry', '~> 1.1.0'
+  
+  pod 'ZYBannerView', '~> 1.1.6'
   
   #自写OC基础类拓展类目
-  #pod 'JQExtensions', '~> 0.0.3'
-  pod 'JQExtensions', '~> 1.1.1'
-  pod 'JQWebView', '~> 1.1.0'
+  pod 'JQExtensions', '~> 1.1.3'
+  pod 'JQWebView', '~> 1.1.1'
   pod 'JQLoadingStatusView', '~> 1.0.2'
-  pod 'TZImagePickerController'
+  pod 'TZImagePickerController', '~> 3.3.1'
   #函数响应式编程框架
-  pod 'ReactiveObjC', '~> 3.0.0'
-  pod 'Bugly'
+  pod 'ReactiveObjC', '~> 3.1.1'
+  pod 'Bugly', '~> 2.5.4'
   #导航栏设置
   #pod 'WRNavigationBar','~>1.2.0'
   #pod 'JXCategoryView'
   # 键盘
-  pod 'IQKeyboardManager'
+  pod 'IQKeyboardManager','~> 6.5.5'
   inhibit_all_warnings!
   
 end

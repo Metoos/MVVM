@@ -182,6 +182,18 @@
  */
 +(void)clearCache:(NSString *)path;
 
+/**  字节大小转字符串 系统自带方法
+*  @param count 字节大小
+*  @return 数据大小文字
+*/
+
++ (NSString *)byteCountFormatterCount:(long long)count;
+
+/**  字节大小转字符串 自定义方法
+*  @param value 字节大小
+*  @return 数据大小文字
+*/
++ (NSString *)byteCountTransformedValue:(id)value;
 
 /**
  *  字符串操作类*********************************************

@@ -360,7 +360,7 @@ TZImagePickerControllerDelegate>
     dic.addObjectSupplementForKey(@"sign",sign);
     DLog(@"file格式上传图片dic=%@",dic);
     // 显示进度
-    [self.manager POST:self.url parameters:dic constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
+    [self.manager POST:self.url parameters:dic headers:nil constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
         //把图片转成NSData类型的
         //数据来保存文件
         // 上传的参数名
@@ -442,7 +442,7 @@ TZImagePickerControllerDelegate>
         [weakSelf.delegate uploadBeginWithUploadView:weakSelf.sender];
     }
 
-    [manager POST:self.url parameters:dic progress:^(NSProgress * _Nonnull uploadProgress) {
+    [manager POST:self.url parameters:dic headers:nil progress:^(NSProgress * _Nonnull uploadProgress) {
         
         dispatch_async(dispatch_get_main_queue(), ^
         {

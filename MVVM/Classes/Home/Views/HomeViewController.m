@@ -24,7 +24,6 @@
     [super viewDidLoad];
     
 
-    
     ///全界面加载视图
     //设置加载界面背景颜色
     self.view.stateView.backgroundColor = kNavBgColor;

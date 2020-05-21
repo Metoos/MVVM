@@ -1,62 +1,64 @@
 PODS:
-  - AFNetworking (3.1.0):
-    - AFNetworking/NSURLSession (= 3.1.0)
-    - AFNetworking/Reachability (= 3.1.0)
-    - AFNetworking/Security (= 3.1.0)
-    - AFNetworking/Serialization (= 3.1.0)
-    - AFNetworking/UIKit (= 3.1.0)
-  - AFNetworking/NSURLSession (3.1.0):
+  - AFNetworking (4.0.1):
+    - AFNetworking/NSURLSession (= 4.0.1)
+    - AFNetworking/Reachability (= 4.0.1)
+    - AFNetworking/Security (= 4.0.1)
+    - AFNetworking/Serialization (= 4.0.1)
+    - AFNetworking/UIKit (= 4.0.1)
+  - AFNetworking/NSURLSession (4.0.1):
     - AFNetworking/Reachability
     - AFNetworking/Security
     - AFNetworking/Serialization
-  - AFNetworking/Reachability (3.1.0)
-  - AFNetworking/Security (3.1.0)
-  - AFNetworking/Serialization (3.1.0)
-  - AFNetworking/UIKit (3.1.0):
+  - AFNetworking/Reachability (4.0.1)
+  - AFNetworking/Security (4.0.1)
+  - AFNetworking/Serialization (4.0.1)
+  - AFNetworking/UIKit (4.0.1):
     - AFNetworking/NSURLSession
-  - Bugly (2.5.0)
+  - Bugly (2.5.4)
   - FDFullscreenPopGesture (1.1)
-  - IQKeyboardManager (6.3.0)
-  - JQExtensions (1.1)
+  - IQKeyboardManager (6.5.5)
+  - JQExtensions (1.1.3)
   - JQLoadingStatusView (1.0.2)
-  - JQWebView (1.1.0)
+  - JQWebView (1.1.1)
   - Masonry (1.1.0)
-  - MJExtension (3.0.17)
-  - MJRefresh (3.1.17)
+  - MJExtension (3.2.1)
+  - MJRefresh (3.4.3)
   - Reachability (3.1.1)
-  - ReactiveObjC (3.0.0)
-  - SDWebImage (4.3.3):
-    - SDWebImage/Core (= 4.3.3)
-  - SDWebImage/Core (4.3.3)
-  - SVProgressHUD (2.0.4)
-  - TZImagePickerController (3.2.0)
-  - ZYBannerView (1.1.4)
+  - ReactiveObjC (3.1.1)
+  - SDWebImage (5.8.0):
+    - SDWebImage/Core (= 5.8.0)
+  - SDWebImage/Core (5.8.0)
+  - SVProgressHUD (2.2.5)
+  - TZImagePickerController (3.3.1)
+  - ZYBannerView (1.1.6)
 
 DEPENDENCIES:
-  - AFNetworking (~> 3.1.0)
-  - Bugly
+  - AFNetworking (~> 4.0.1)
+  - Bugly (~> 2.5.4)
   - FDFullscreenPopGesture (~> 1.1)
-  - IQKeyboardManager
-  - JQExtensions (~> 1.1)
+  - IQKeyboardManager (~> 6.5.5)
+  - JQExtensions (~> 1.1.3)
   - JQLoadingStatusView (~> 1.0.2)
-  - JQWebView (~> 1.1.0)
-  - Masonry
-  - MJExtension (~> 3.0.10)
-  - MJRefresh (~> 3.1.9)
+  - JQWebView (~> 1.1.1)
+  - Masonry (~> 1.1.0)
+  - MJExtension (~> 3.2.1)
+  - MJRefresh (~> 3.4.3)
   - Reachability (~> 3.1.1)
-  - ReactiveObjC (~> 3.0.0)
-  - SDWebImage (~> 4.3.1)
-  - SVProgressHUD (~> 2.0.3)
-  - TZImagePickerController
-  - ZYBannerView (~> 1.1.3)
+  - ReactiveObjC (~> 3.1.1)
+  - SDWebImage (~> 5.8.0)
+  - SVProgressHUD (~> 2.2.5)
+  - TZImagePickerController (~> 3.3.1)
+  - ZYBannerView (~> 1.1.6)
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
+  trunk:
     - AFNetworking
     - Bugly
     - FDFullscreenPopGesture
     - IQKeyboardManager
+    - JQExtensions
     - JQLoadingStatusView
+    - JQWebView
     - Masonry
     - MJExtension
     - MJRefresh
@@ -66,28 +68,25 @@ SPEC REPOS:
     - SVProgressHUD
     - TZImagePickerController
     - ZYBannerView
-  trunk:
-    - JQExtensions
-    - JQWebView
 
 SPEC CHECKSUMS:
-  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
-  Bugly: 3ca9f255c01025582df26f9222893b383c7e4b4e
+  AFNetworking: 7864c38297c79aaca1500c33288e429c3451fdce
+  Bugly: 4edda9bb0e3017fd453612189069757195fa23ca
   FDFullscreenPopGesture: a8a620179e3d9c40e8e00256dcee1c1a27c6d0f0
-  IQKeyboardManager: 2ca9d64893247556f53523dcd8d78641f0ba7c23
-  JQExtensions: a97eccdc0d5d716f32ed01883b84d4bbcdb93afe
+  IQKeyboardManager: 3a8b9e603f8b0eeaf5f096a1f2b2cfcf121992ef
+  JQExtensions: 05c16d21a4960364fe5897923eaa5138de1762c2
   JQLoadingStatusView: 2a5bfefd1136f849ab83e312e9af9e89e450bcee
-  JQWebView: 0c156c1805dd100306eb3346e0b92968545b7807
+  JQWebView: eb2d0a98167fcd90723e1f1f7fdae9970784b599
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
-  MJExtension: 74ec83124a68891619fb7ba9c5c811bbf1691076
-  MJRefresh: ee5b68f639775462faba4db0fd243baf4d42c2cf
+  MJExtension: 635f2c663dcb1bf76fa4b715b2570a5710aec545
+  MJRefresh: 53e3e3219f204425ee6d3e62e8733d3295944cd6
   Reachability: dd9aa4fb6667b9f787690a74f53cb7634ce99893
-  ReactiveObjC: ce79989e8684b9086b5f8d0c74bc7b81a8729c9e
-  SDWebImage: de4d90b5bff3571eae7bd16202b1f43135409fa5
-  SVProgressHUD: bfde85ed6c573ea802b9cb37894ed9b629034f1b
-  TZImagePickerController: 7850b158d025065b162a1a963d445040b828abc9
-  ZYBannerView: 477bcb8c38bb0b2a45bae014f9e4fa8357809023
+  ReactiveObjC: 011caa393aa0383245f2dcf9bf02e86b80b36040
+  SDWebImage: 84000f962cbfa70c07f19d2234cbfcf5d779b5dc
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+  TZImagePickerController: 99f03b64145a8c92c55b9b1b931410967d9be4cb
+  ZYBannerView: 7a1c76cab9a5438bf5c7529b8fc99cacb5af5898
 
-PODFILE CHECKSUM: c12c726890179edd4134e69b084730a2c5afab03
+PODFILE CHECKSUM: a3c42d1c47fcaa2bf73c72d5b692c40758a10d18
 
-COCOAPODS: 1.8.4
+COCOAPODS: 1.9.1

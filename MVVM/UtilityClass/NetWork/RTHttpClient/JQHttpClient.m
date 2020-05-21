@@ -79,7 +79,7 @@
 //                self.manager.securityPolicy.allowInvalidCertificates = YES;//生产环境不建议使用
 //                self.manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json",@"text/json", @"text/plain", @"text/html", nil];
 
-                [self.manager GET:url parameters:parameters progress:nil success:success failure:failure];
+                [self.manager GET:url parameters:parameters headers:nil progress:nil success:success failure:failure];
                 
             }
                 break;
@@ -88,7 +88,7 @@
                 //请求参数序列化类型
                 self.manager.requestSerializer = [AFJSONRequestSerializer serializer];
 //                [self.manager POST:url parameters:parameters progress:nil success:success failure:failure];
-                [self.manager POST:url parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+                [self.manager POST:url parameters:parameters headers:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
                     [self otherExecuteWithURL:url AndTask:task AndResponseObject:responseObject Success:success];
                 } failure:failure];
             }
@@ -101,7 +101,7 @@
                 [requesetSerializer requestWithMethod:@"POST" URLString:url parameters:parameters error:nil];
                 self.manager.requestSerializer = requesetSerializer;
 //                [self.manager POST:url parameters:parameters progress:nil success:success failure:failure];
-                [self.manager POST:url parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+                [self.manager POST:url parameters:parameters headers:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
                     [self otherExecuteWithURL:url AndTask:task AndResponseObject:responseObject Success:success];
                 } failure:failure];
             }
@@ -110,12 +110,12 @@
             {
                 //请求参数序列化类型
 //                self.manager.requestSerializer = [AFJSONRequestSerializer serializer];
-                [self.manager DELETE:url parameters:parameters  success:success failure:failure];
+                [self.manager DELETE:url parameters:parameters  headers:nil success:success failure:failure];
             }
                 break;
             case JQHttpRequestPut:
             {
-                [self.manager PUT:url parameters:parameters success:success failure:failure];
+                [self.manager PUT:url parameters:parameters headers:nil success:success failure:failure];
             }
                 break;
             default:
@@ -179,7 +179,7 @@
                 //                self.manager.securityPolicy.allowInvalidCertificates = YES;//生产环境不建议使用
                 //                self.manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json",@"text/json", @"text/plain", @"text/html", nil];
                 
-                [self.manager GET:url parameters:parameters progress:nil success:success failure:failure];
+                [self.manager GET:url parameters:parameters headers:nil progress:nil success:success failure:failure];
                 
             }
                 break;
@@ -187,7 +187,7 @@
             {
                 //请求参数序列化类型
                 self.manager.requestSerializer = [AFJSONRequestSerializer serializer];
-                [self.manager POST:url parameters:parameters progress:nil success:success failure:failure];
+                [self.manager POST:url parameters:parameters headers:nil progress:nil success:success failure:failure];
             }
                 break;
             case JQHttpRequestPostString:
@@ -197,19 +197,19 @@
                 AFHTTPRequestSerializer *requesetSerializer  = [AFHTTPRequestSerializer serializer];
                 [requesetSerializer requestWithMethod:@"POST" URLString:url parameters:parameters error:nil];
                 self.manager.requestSerializer = requesetSerializer;
-                [self.manager POST:url parameters:parameters progress:nil success:success failure:failure];
+                [self.manager POST:url parameters:parameters headers:nil progress:nil success:success failure:failure];
             }
                 break;
             case JQHttpRequestDelete:
             {
                 //请求参数序列化类型
                 //                self.manager.requestSerializer = [AFJSONRequestSerializer serializer];
-                [self.manager DELETE:url parameters:parameters  success:success failure:failure];
+                [self.manager DELETE:url parameters:parameters headers:nil success:success failure:failure];
             }
                 break;
             case JQHttpRequestPut:
             {
-                [self.manager PUT:url parameters:parameters success:success failure:failure];
+                [self.manager PUT:url parameters:parameters headers:nil success:success failure:failure];
             }
                 break;
             default:
@@ -333,7 +333,7 @@
                       failure:(void (^)(NSURLSessionDataTask *task, NSError *error))failure
 {
     if ([self isConnectionAvailable]) {
-        [self.manager HEAD:url parameters:parameters success:success failure:failure];
+        [self.manager HEAD:url parameters:parameters headers:nil success:success failure:failure];
     }else{
         [self showExceptionDialogToView:view];
     }

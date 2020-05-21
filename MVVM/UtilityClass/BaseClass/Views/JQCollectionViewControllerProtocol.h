@@ -18,7 +18,14 @@
  @return 实例化控制器对象
  */
 - (instancetype)initWithViewModel:(id<JQCollectionViewModelProtocol>)viewModel;
-
+/**
+Storyboard唯一初始化方法
+@param viewModel 传入ViewModel
+@return 实例化控制器对象
+*/
+- (instancetype)initStoryboardWithName:(NSString *)name
+                           identiffier:(NSString *)identiffier
+                             ViewModel:(id<JQBaseViewModelProtocol>)viewModel;
 /**
  进行数据的请求
  */
