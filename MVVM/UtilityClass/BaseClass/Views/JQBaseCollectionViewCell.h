@@ -25,6 +25,7 @@
                          forIndexPath:(NSIndexPath *)indexPath
                             viewModel:(JQCollectionCellViewModel *)viewModel;
 
+@property (nonatomic,strong,readonly) NSIndexPath *indexPath;
 /**
  cell中按钮点击的信号量监听
  */

@@ -20,9 +20,10 @@
  @param viewModel cellViewModel
  @return cell
  */
-+ (instancetype)cellForTableView:(UITableView *)tableView viewModel:(JQTableViewCellViewModel *)viewModel;
++ (instancetype)cellForTableView:(UITableView *)tableView viewModel:(JQTableViewCellViewModel *)viewModel indexPath:(NSIndexPath *)indexPath;
 
 
+@property (nonatomic,strong,readonly) NSIndexPath *indexPath;
 /**
  cell中按钮点击的信号量监听
  */

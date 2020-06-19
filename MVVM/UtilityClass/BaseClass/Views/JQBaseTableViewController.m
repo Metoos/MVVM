@@ -180,7 +180,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    JQBaseTableViewCell *cell = [[self cellClassForRowAtIndexPath:indexPath] cellForTableView:tableView viewModel:[self.viewModel cellViewModelForRowAtIndexPath:indexPath]];
+    JQBaseTableViewCell *cell = [[self cellClassForRowAtIndexPath:indexPath] cellForTableView:tableView viewModel:[self.viewModel cellViewModelForRowAtIndexPath:indexPath] indexPath:indexPath];
     cell.selectionStyle = [self.viewModel tableViewCellSelectionStyle];
     return cell;
 }

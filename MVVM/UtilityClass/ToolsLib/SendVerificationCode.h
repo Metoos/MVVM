@@ -45,7 +45,7 @@ typedef NS_ENUM(NSInteger,MsgType) {
 
  
 
-@property (strong, nonatomic)id<SendVerificationCodeDelegate> delegate;
+@property (weak, nonatomic)id<SendVerificationCodeDelegate> delegate;
 
 /** 发送验证码 
  * @Param phone 手机号

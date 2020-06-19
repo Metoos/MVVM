@@ -256,7 +256,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     JQTableViewCellViewModel *cellViewModel = [self.viewModel cellViewModelForRowAtIndexPath:indexPath];
-    JQBaseTableViewCell *cell = [[self cellClassForRowAtIndexPath:indexPath] cellForTableView:tableView viewModel:cellViewModel];
+    JQBaseTableViewCell *cell = [[self cellClassForRowAtIndexPath:indexPath] cellForTableView:tableView viewModel:cellViewModel indexPath:indexPath];
     cell.selectionStyle = [self.viewModel tableViewCellSelectionStyle];
     
     //cell中按钮点击的信号量监听
@@ -282,7 +282,7 @@
 
 #pragma mark - getter
 
--(UITableView *)tableView
+- (UITableView *)tableView
 {
     if (!_tableView) {
         

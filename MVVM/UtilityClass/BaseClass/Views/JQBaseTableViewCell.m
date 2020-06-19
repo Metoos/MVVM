@@ -15,11 +15,14 @@
  */
 @property (nonatomic,strong) RACSubject *cellButtonsSignal;
 
+@property (nonatomic,strong) NSIndexPath *indexPath;
+
 @end
+
 @implementation JQBaseTableViewCell
 
 
-+ (instancetype)cellForTableView:(UITableView *)tableView viewModel:(JQTableViewCellViewModel *)viewModel
++ (instancetype)cellForTableView:(UITableView *)tableView viewModel:(JQTableViewCellViewModel *)viewModel indexPath:(NSIndexPath *)indexPath
 {
     NSString *identify = NSStringFromClass([self class]);
     JQBaseTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identify];
@@ -30,7 +33,7 @@
       
     }
     cell.viewModel = viewModel;
-    
+    cell.indexPath = indexPath;
     [cell jq_setupData];
     
     return cell;

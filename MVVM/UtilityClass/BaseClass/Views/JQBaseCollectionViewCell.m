@@ -14,6 +14,9 @@
  */
 @property (nonatomic,strong) RACSubject *cellButtonsSignal;
 
+
+@property (nonatomic,strong) NSIndexPath *indexPath;
+
 @end
 @implementation JQBaseCollectionViewCell
 + (instancetype)itemForCollectionView:(UICollectionView *)collectionView

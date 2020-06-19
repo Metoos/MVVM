@@ -461,11 +461,10 @@
 {
     if (!_addImageView) {
         _addImageView = [[JQUploadImageView alloc] init];
-        _addImageView.placeHolderImage = self.addImage;
+        _addImageView.placeHolderImage = self.addImage?:[UIImage imageNamed:@"JQUploadImageView.bundle/添加"];
         _addImageView.isAddImgType = YES;
         UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(addClik:)];
         [_addImageView addGestureRecognizer:tap];
-        _addImageView.placeHolderImage = [UIImage imageNamed:@"JQUploadImageView.bundle/添加"];
     }
     return _addImageView;
 }

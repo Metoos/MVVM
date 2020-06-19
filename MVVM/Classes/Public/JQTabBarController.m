@@ -200,13 +200,6 @@
 {
     JQNavigationController *nav = [[JQNavigationController alloc] initWithRootViewController:childVc];
     nav.supportMaskAllButUpsideDown = NO;
-    //设置image总是展示原图
-//    norImage = [norImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-//    selImage = [selImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-//
-//    childVc.tabBarItem.title = title;
-//    childVc.tabBarItem.image = norImage;
-//    childVc.tabBarItem.selectedImage = selImage;
     childVc.tabBarItem = [self itemWithSelectedImage:selImage image:norImage title:title];
     [self addChildViewController:nav];
     

@@ -71,7 +71,7 @@
 //    }
     
     // 这里的基类ViewModel实现的title是nil，子类实现，获取到对应的子类控制器标题
-    self.title = self.viewModel.title;
+    //    self.navigationItem.title = self.viewModel.title;
     UIBarButtonItem *backBtn = [[UIBarButtonItem alloc]initWithImage:[[UIImage imageNamed:@"backWhite"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] style:UIBarButtonItemStylePlain target:self action:@selector(goBackAction)];
     
     self.navigationItem.leftBarButtonItem = backBtn;

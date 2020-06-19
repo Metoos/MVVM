@@ -21,7 +21,7 @@ target 'MVVM' do
   #自写OC基础类拓展类目
   pod 'JQExtensions', '~> 1.1.3'
   pod 'JQWebView', '~> 1.1.1'
-  pod 'JQLoadingStatusView', '~> 1.0.2'
+  pod 'JQLoadingStatusView', '~> 1.0.3'
   pod 'TZImagePickerController', '~> 3.3.1'
   #函数响应式编程框架
   pod 'ReactiveObjC', '~> 3.1.1'
