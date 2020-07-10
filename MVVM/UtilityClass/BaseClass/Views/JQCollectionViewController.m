@@ -25,24 +25,6 @@
 @implementation JQCollectionViewController
 @dynamic viewModel;
 
-+ (instancetype)allocWithZone:(struct _NSZone *)zone {
-    
-    JQCollectionViewController *viewController = [super allocWithZone:zone];
-    
-    @weakify(viewController)
-    
-    [[viewController rac_signalForSelector:@selector(viewDidLoad)] subscribeNext:^(id x) {
-        
-        @strongify(viewController)
-        [viewController jq_layoutNavigation];
-        [viewController jq_setupViewLayout];
-        [viewController jq_setupBinding];
-        [viewController jq_setupData];
-    }];
-    
-    return viewController;
-}
-
 - (instancetype)initWithViewModel:(id<JQCollectionViewModelProtocol>)viewModel {
     self = [super initWithNibName:nil bundle:nil];
     if (self) {
