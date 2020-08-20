@@ -7,8 +7,7 @@
 //
 
 #import "LoginStorage.h"
-#import "JKEncrypt.h"
-
+#import "JQEncrypt.h"
 static NSString * const username = @"username";
 static NSString * const password = @"password";
 static NSString * const userinfo = @"userinfo";
@@ -29,14 +28,14 @@ static NSString * const isOpenFingerprintPasswordUserKey = @"isOpenFingerprintPa
 
 + (void)saveUserName:(NSString *)userName
 {
-    NSString *enctyptString = [JKEncrypt doEncryptStr:userName];
+    NSString *enctyptString = [JQEncrypt doEncryptStr:userName];
     [self saveValue:enctyptString forKey:username];
 }
 
 + (NSString *)userName
 {
     NSString *enctyptString = [self valueWithKey:username];
-    NSString *decEn = [JKEncrypt doDecEncryptStr:enctyptString];
+    NSString *decEn = [JQEncrypt doDecEncryptStr:enctyptString];
     return decEn;
 }
 /**
@@ -47,7 +46,7 @@ static NSString * const isOpenFingerprintPasswordUserKey = @"isOpenFingerprintPa
 + (NSString *)password
 {
     NSString *enctyptString = [self valueWithKey:password];
-    NSString *decEn = [JKEncrypt doDecEncryptStr:enctyptString];
+    NSString *decEn = [JQEncrypt doDecEncryptStr:enctyptString];
     
     return decEn;
 }
@@ -59,7 +58,7 @@ static NSString * const isOpenFingerprintPasswordUserKey = @"isOpenFingerprintPa
  */
 + (void)savePassword:(NSString *)pwd
 {
-    NSString *enctyptString = [JKEncrypt doEncryptStr:pwd];
+    NSString *enctyptString = [JQEncrypt doEncryptStr:pwd];
     [self saveValue:enctyptString forKey:password];
 }
 
@@ -116,8 +115,8 @@ static NSString * const isOpenFingerprintPasswordUserKey = @"isOpenFingerprintPa
  */
 + (void)savePayPassword:(NSString *)payPassword
 {
-    NSString *enctyptString = [JKEncrypt doEncryptStr:payPassword];
-    NSString *toUser = [JKEncrypt doEncryptStr:[self userName]?:@""];
+    NSString *enctyptString = [JQEncrypt doEncryptStr:payPassword];
+    NSString *toUser = [JQEncrypt doEncryptStr:[self userName]?:@""];
     [self saveValue:enctyptString forKey:payPasswordKey];
     [self saveValue:toUser forKey:payPasswordUserKey];
 }
@@ -127,9 +126,9 @@ static NSString * const isOpenFingerprintPasswordUserKey = @"isOpenFingerprintPa
 + (NSString *)payPassword
 {
     NSString *enctyptString = [self valueWithKey:payPasswordKey];
-    NSString *decEn = [JKEncrypt doDecEncryptStr:enctyptString];
+    NSString *decEn = [JQEncrypt doDecEncryptStr:enctyptString];
     NSString *formUserEnctypt = [self valueWithKey:payPasswordUserKey];
-    NSString *formUser = [JKEncrypt doDecEncryptStr:formUserEnctypt];
+    NSString *formUser = [JQEncrypt doDecEncryptStr:formUserEnctypt];
     if ([formUser isEqualToString:[self userName]]) {
         return decEn;
     }else
@@ -144,8 +143,8 @@ static NSString * const isOpenFingerprintPasswordUserKey = @"isOpenFingerprintPa
  */
 + (void)saveGestureLock:(NSString *)gestureLock
 {
-    NSString *enctyptString = [JKEncrypt doEncryptStr:gestureLock];
-    NSString *toUser = [JKEncrypt doEncryptStr:[self userName]?:@""];
+    NSString *enctyptString = [JQEncrypt doEncryptStr:gestureLock];
+    NSString *toUser = [JQEncrypt doEncryptStr:[self userName]?:@""];
     [self saveValue:enctyptString forKey:gestureLockKey];
     [self saveValue:toUser forKey:gestureLockUserKey];
 }
@@ -156,10 +155,10 @@ static NSString * const isOpenFingerprintPasswordUserKey = @"isOpenFingerprintPa
 {
     NSString *enctyptString = [self valueWithKey:gestureLockKey];
     
-    NSString *decEn = [JKEncrypt doDecEncryptStr:enctyptString];
+    NSString *decEn = [JQEncrypt doDecEncryptStr:enctyptString];
     
     NSString *formUserEnctypt = [self valueWithKey:gestureLockUserKey];
-    NSString *formUser = [JKEncrypt doDecEncryptStr:formUserEnctypt];
+    NSString *formUser = [JQEncrypt doDecEncryptStr:formUserEnctypt];
     
     if ([formUser isEqualToString:[self userName]]) {
         return decEn;
@@ -175,8 +174,8 @@ static NSString * const isOpenFingerprintPasswordUserKey = @"isOpenFingerprintPa
  */
 + (void)saveIsOpenGestureLock:(BOOL)isOpen 
 {
-    NSString *enctyptString = [JKEncrypt doEncryptStr:isOpen?@"1":@"0"];
-    NSString *toUser = [JKEncrypt doEncryptStr:[self userName]?:@""];
+    NSString *enctyptString = [JQEncrypt doEncryptStr:isOpen?@"1":@"0"];
+    NSString *toUser = [JQEncrypt doEncryptStr:[self userName]?:@""];
     [self saveValue:enctyptString forKey:isOpenGestureLockkey];
     [self saveValue:toUser forKey:isOpenGestureLockUserkey];
 }
@@ -186,10 +185,10 @@ static NSString * const isOpenFingerprintPasswordUserKey = @"isOpenFingerprintPa
 + (BOOL)isOpenGestureLock
 {
     NSString *enctyptString = [self valueWithKey:isOpenGestureLockkey];
-    NSString *decEn = [JKEncrypt doDecEncryptStr:enctyptString];
+    NSString *decEn = [JQEncrypt doDecEncryptStr:enctyptString];
     
     NSString *formUserEnctypt = [self valueWithKey:isOpenGestureLockUserkey];
-    NSString *formUser = [JKEncrypt doDecEncryptStr:formUserEnctypt];
+    NSString *formUser = [JQEncrypt doDecEncryptStr:formUserEnctypt];
     
     if ([formUser isEqualToString:[self userName]]) {
         return [decEn isEqualToString:@"1"];
@@ -206,8 +205,8 @@ static NSString * const isOpenFingerprintPasswordUserKey = @"isOpenFingerprintPa
  */
 + (void)saveIsOpenFingerprintPassword:(BOOL)isOpen
 {
-    NSString *enctyptString = [JKEncrypt doEncryptStr:isOpen?@"1":@"0"];
-    NSString *toUser = [JKEncrypt doEncryptStr:[self userName]?:@""];
+    NSString *enctyptString = [JQEncrypt doEncryptStr:isOpen?@"1":@"0"];
+    NSString *toUser = [JQEncrypt doEncryptStr:[self userName]?:@""];
     [self saveValue:enctyptString forKey:isOpenFingerprintPasswordKey];
     [self saveValue:toUser forKey:isOpenFingerprintPasswordUserKey];
     
@@ -218,10 +217,10 @@ static NSString * const isOpenFingerprintPasswordUserKey = @"isOpenFingerprintPa
 + (BOOL)isOpenFingerprintPassword
 {
     NSString *enctyptString = [self valueWithKey:isOpenFingerprintPasswordKey];
-    NSString *decEn = [JKEncrypt doDecEncryptStr:enctyptString];
+    NSString *decEn = [JQEncrypt doDecEncryptStr:enctyptString];
     
     NSString *formUserEnctypt = [self valueWithKey:isOpenFingerprintPasswordUserKey];
-    NSString *formUser = [JKEncrypt doDecEncryptStr:formUserEnctypt];
+    NSString *formUser = [JQEncrypt doDecEncryptStr:formUserEnctypt];
     
     if ([formUser isEqualToString:[self userName]]) {
         return [decEn isEqualToString:@"1"];

@@ -40,7 +40,6 @@
  */
 + (void)savePassword:(NSString *)pwd;
 
-
 /**
  *  保存登录用户信息
  *

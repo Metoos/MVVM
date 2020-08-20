@@ -38,7 +38,7 @@
 		0438A8FF23028B7E003827C4 /* JQHttpClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 0438A78C23028B7D003827C4 /* JQHttpClient.m */; };
 		0438A91523028B7E003827C4 /* GTMBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 0438A7C823028B7D003827C4 /* GTMBase64.m */; };
 		0438A91623028B7E003827C4 /* HYPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0438A7CC23028B7D003827C4 /* HYPageView.m */; };
-		0438A91D23028B7E003827C4 /* JKEncrypt.m in Sources */ = {isa = PBXBuildFile; fileRef = 0438A7DD23028B7D003827C4 /* JKEncrypt.m */; };
+		0438A91D23028B7E003827C4 /* JQEncrypt.m in Sources */ = {isa = PBXBuildFile; fileRef = 0438A7DD23028B7D003827C4 /* JQEncrypt.m */; };
 		0438A92723028B7E003827C4 /* SendVerificationCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 0438A7EE23028B7D003827C4 /* SendVerificationCode.m */; };
 		0438A92823028B7E003827C4 /* MenuItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0438A7F023028B7D003827C4 /* MenuItemView.m */; };
 		0438A92923028B7E003827C4 /* MenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 0438A7F223028B7D003827C4 /* MenuItem.m */; };
@@ -219,9 +219,9 @@
 		0438A7CA23028B7D003827C4 /* MaskLayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaskLayerView.h; sourceTree = "<group>"; };
 		0438A7CC23028B7D003827C4 /* HYPageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYPageView.m; sourceTree = "<group>"; };
 		0438A7CD23028B7D003827C4 /* HYPageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYPageView.h; sourceTree = "<group>"; };
-		0438A7DD23028B7D003827C4 /* JKEncrypt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKEncrypt.m; sourceTree = "<group>"; };
+		0438A7DD23028B7D003827C4 /* JQEncrypt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JQEncrypt.m; sourceTree = "<group>"; };
 		0438A7DE23028B7D003827C4 /* ReadMe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReadMe.h; sourceTree = "<group>"; };
-		0438A7DF23028B7D003827C4 /* JKEncrypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKEncrypt.h; sourceTree = "<group>"; };
+		0438A7DF23028B7D003827C4 /* JQEncrypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JQEncrypt.h; sourceTree = "<group>"; };
 		0438A7EE23028B7D003827C4 /* SendVerificationCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SendVerificationCode.m; sourceTree = "<group>"; };
 		0438A7F023028B7D003827C4 /* MenuItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuItemView.m; sourceTree = "<group>"; };
 		0438A7F123028B7D003827C4 /* MenuGroupView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuGroupView.h; sourceTree = "<group>"; };
@@ -649,7 +649,7 @@
 				1C5B90E823C80D32002AF418 /* CustomPickerView */,
 				0438A7C523028B7D003827C4 /* GTMBase64 */,
 				0438A7CB23028B7D003827C4 /* HYPageView */,
-				0438A7DC23028B7D003827C4 /* JKEncrypt3DESCBC256 */,
+				0438A7DC23028B7D003827C4 /* JQEncrypt3DESCBC256 */,
 				0438A80523028B7D003827C4 /* JQLanguageTool.h */,
 				0438A83823028B7D003827C4 /* JQLanguageTool.m */,
 				0438A7C923028B7D003827C4 /* KeyboardToolsView.h */,
@@ -691,14 +691,14 @@
 			path = HYPageView;
 			sourceTree = "<group>";
 		};
-		0438A7DC23028B7D003827C4 /* JKEncrypt3DESCBC256 */ = {
+		0438A7DC23028B7D003827C4 /* JQEncrypt3DESCBC256 */ = {
 			isa = PBXGroup;
 			children = (
-				0438A7DF23028B7D003827C4 /* JKEncrypt.h */,
-				0438A7DD23028B7D003827C4 /* JKEncrypt.m */,
+				0438A7DF23028B7D003827C4 /* JQEncrypt.h */,
+				0438A7DD23028B7D003827C4 /* JQEncrypt.m */,
 				0438A7DE23028B7D003827C4 /* ReadMe.h */,
 			);
-			path = JKEncrypt3DESCBC256;
+			path = JQEncrypt3DESCBC256;
 			sourceTree = "<group>";
 		};
 		0438A7EF23028B7D003827C4 /* MenuGourpView */ = {
@@ -1290,7 +1290,7 @@
 				047DC2DF236195A000BC9289 /* JQCollectionViewController.m in Sources */,
 				0438A92E23028B7E003827C4 /* UIView+WZLBadge.m in Sources */,
 				1C5B912123C80D4A002AF418 /* ALiImageShapeView.m in Sources */,
-				0438A91D23028B7E003827C4 /* JKEncrypt.m in Sources */,
+				0438A91D23028B7E003827C4 /* JQEncrypt.m in Sources */,
 				0438A93A23028B7E003827C4 /* WRCustomNavigationBar.m in Sources */,
 				1C5B911F23C80D4A002AF418 /* JQProgressAnimatedView.m in Sources */,
 				0490B2AC23A784B900D7AF63 /* CaptchaButton.m in Sources */,

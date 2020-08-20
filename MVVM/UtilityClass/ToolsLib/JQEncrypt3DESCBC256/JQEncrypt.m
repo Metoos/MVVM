@@ -1,12 +1,12 @@
 //
-//  JKEncrypt.m
+//  JQEncrypt.m
 //  3DES加密
 //
 //  Created by apple on 15/10/22.
 //  Copyright © 2015年 apple. All rights reserved.
 //
 
-#import "JKEncrypt.h"
+#import "JQEncrypt.h"
 #import <CommonCrypto/CommonDigest.h>
 #import <CommonCrypto/CommonCryptor.h>
 #import <Security/Security.h>
@@ -19,12 +19,12 @@
 //偏移量
 #define gIv             @"EXu5O7Bw"
 
-@implementation JKEncrypt
+@implementation JQEncrypt
 
 //字符串
 + (NSString *)doEncryptStr:(NSString *)originalStr{
     
-    DLog(@"密匙key=%@\n偏移量=%@\n加密串：%@",gkey,gIv,originalStr);
+    NSLog(@"密匙key=%@\n偏移量=%@\n加密串：%@",gkey,gIv,originalStr);
     
     NSData* data = [originalStr dataUsingEncoding:NSUTF8StringEncoding];
     size_t plainTextBufferSize = [data length];
@@ -63,7 +63,7 @@
 + (NSString *)doEncryptNSDictionary:(id)obj
 {
     NSString * str = [self DataTOjsonString:obj];
-    DLog(@"加密前str = %@",str);
+    NSLog(@"加密前str = %@",str);
     return [self doEncryptStr:str];
 }
 
@@ -71,7 +71,7 @@
 + (NSDictionary *)doDecEncryptStrConverDictionary:(NSString *)str
 {
     NSString *string = [self doDecEncryptStr:str];
-    DLog(@"解密str = %@",string);
+    NSLog(@"解密str = %@",string);
     return [self dictionaryWithJsonString:string];
 }
 

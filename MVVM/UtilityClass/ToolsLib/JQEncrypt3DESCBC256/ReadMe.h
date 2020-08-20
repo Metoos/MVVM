@@ -1,6 +1,6 @@
 //
 //  ReadMe.h
-//  JK3DES
+//  JQ3DES
 //
 //  Created by apple on 15/12/11.
 //  Copyright © 2015年 apple. All rights reserved.
@@ -10,7 +10,7 @@
 #define ReadMe_h
 使用前必读：
 
-JKEncrypt 是用于3DES 256加密解密的库。
+JQEncrypt 是用于3DES 256加密解密的库。
 支持字符串形式和16进制
 
 字符串加密：doEncryptStr
@@ -30,7 +30,7 @@ JKEncrypt 是用于3DES 256加密解密的库。
 @"是测试字符串，换成您需要加密的内容即可"
 
 
-JKEncrypt * en = [[JKEncrypt alloc]init];
+JQEncrypt * en = [[JQEncrypt alloc]init];
 //加密
 NSString * encryptStr = [en doEncryptStr: @"是测试字符串，换成您需要加密的内容即可"];
 
@@ -45,8 +45,6 @@ NSString *decEncryptHex = [en doEncryptHex:encryptHex];
 
 NSLog(@"字符串解密:%@",decEncryptStr);
 NSLog(@"字符串解密:%@",decEncryptHex);
-
-
 
 
 
@@ -215,7 +213,7 @@ public class DES3 {
      *
      */
     public static class Base64 {
-        private static final char [] legalChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/" .toCharArray();
+        private static final char [] legalChars = "ABCDEFGHIJQLMNOPQRSTUVWXYZabcdefghiJQlmnopqrstuvwxyz0123456789+/" .toCharArray();
         
         public static String encode( byte [] data) {
             int start = 0 ;

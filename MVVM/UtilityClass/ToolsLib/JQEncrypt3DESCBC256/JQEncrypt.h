@@ -1,5 +1,5 @@
 //
-//  JKEncrypt.h
+//  JQEncrypt.h
 //  3DES加密
 //
 //  Created by apple on 15/10/22.
@@ -9,7 +9,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface JKEncrypt : NSObject
+@interface JQEncrypt : NSObject
 
 /**字符串加密 */
 + (NSString *)doEncryptStr:(NSString *)originalStr;
